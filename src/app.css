@@ -2,11 +2,22 @@
 
 * {margin: 0; padding: 0; border: 0; outline: 0; box-sizing: border-box; transition: all 0.15s ease-in-out;}
 html, input, button {font-family: 'Montserrat', 'Oxygen', 'Ubuntu', sans-serif;}
+body {background-color: var(--bg-blue-dark)}
 
-body {background-color: rgb(34, 39, 44);}
+:root
+{
+  --bg-blue-dark: #22272c;
+  --bg-blue-light: #364250;
 
-.highlight
-{color: rgb(9, 255, 0);}
+  --hl-blue-dark:  #3f7faa;
+  --hl-blue-light: #52a7e0;
+
+  --hl-white-dark: #a9b1b9;
+  --hl-white-light: #ffffff;
+
+  --hl-red-dark: #941616;
+  --hl-red-light: #e23535;
+}
 
 .app
 {
@@ -26,7 +37,7 @@ body {background-color: rgb(34, 39, 44);}
   align-items: center;
   gap: 8px;
 
-  color: #fff;
+  color: var(--hl-white-light);
   margin-bottom: 32px;
 }
 
@@ -43,7 +54,7 @@ body {background-color: rgb(34, 39, 44);}
 
   padding: 8px;
   border-radius: 8px;
-  border: 3px solid rgb(132, 143, 155);
+  border: 3px solid var(--hl-white-dark);
 }
 
 .calculator-display
@@ -58,8 +69,7 @@ body {background-color: rgb(34, 39, 44);}
   padding: 16px;
   border-radius: 5px;
 
-  background-color: rgb(255, 255, 255);
-
+  background-color: var(--hl-white-light);
 
   user-select: none;
   text-align: end;
@@ -97,19 +107,20 @@ body {background-color: rgb(34, 39, 44);}
   color: white;
 }
 
-.btn-erase:hover  {background-color: rgb(168, 24, 24);}
-.btn-erase:active {background-color: rgb(148, 22, 22);}
+.btn-erase:hover  {background-color: var(--hl-red-light);}
+.btn-erase:active {background-color: var(--hl-red-dark);}
 
-.btn-operation:hover  {background-color: rgb(82, 167, 224);}
-.btn-operation:active {background-color: rgb(75, 153, 204);}
+.btn-operation:hover  {background-color: var(--hl-blue-light);}
+.btn-operation:active {background-color: var(--hl-blue-dark);}
 
-.btn-number:hover  {background-color: rgb(255, 255, 255); color: #000;}
-.btn-number:active {background-color: rgb(202, 202, 202); color: #000;}
+.btn-number:hover  {background-color: var(--hl-white-light); color: #000;}
+.btn-number:active {background-color: var(--hl-white-dark); color: #000;}
 
-#res   {grid-row: 5; grid-column: 3 / 5;}
-#comma {grid-row: 5;}
+#res, #coma {grid-row: 5;}
+#res {grid-column: 3 / 5;}
 
-#multiply {grid-column: 4; grid-row: 1;}
-#divide   {grid-column: 4; grid-row: 2;}
-#add      {grid-column: 4; grid-row: 3;}
-#sub      {grid-column: 4; grid-row: 4;}
+#multiply, #divide, #add, #sub {grid-column: 4;}
+#multiply {grid-row: 1;}
+#divide   {grid-row: 2;}
+#add      {grid-row: 3;}
+#sub      {grid-row: 4;}

@@ -69,10 +69,10 @@ function App()
 
       setPrevOperand('');
       setOperation('');
-    }
 
-    let currToString = currToFloat.toString();
-    setCurrOperand(currToString);
+      let currToString = currToFloat.toString();
+      setCurrOperand(currToString);
+    }
   }
 
   return (
